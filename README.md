@@ -22,7 +22,7 @@ Official Android app of YMCA UST Faridabad.
 
 4.) Using Fragments wherever possible.
 
-#About the codebase:
+#About The Codebase:
 
 -) Divided in 3 sections namely -: Student , Teachers and Admin.
 
@@ -39,5 +39,7 @@ Official Android app of YMCA UST Faridabad.
 #Contributors:
 
 [Rajeev Yadav](http://github.com/rajeevbaalwan)
+
 [Namit Yadav](http://github.com/algorhythmz)
+
 [Rahul Yadav](http://github.com/rahulyadav20111995)
