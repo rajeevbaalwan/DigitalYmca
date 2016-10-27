@@ -9,7 +9,10 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import in.evolve.upastithi.Student.Activities.StudentLandingActivity;
+import in.evolve.upastithi.Student.Activities.StudentLoginActivity;
 import in.evolve.upastithi.Teacher.Activities.TeacherLanding;
+import in.evolve.upastithi.Teacher.Activities.TeacherLoginActivity;
 import in.evolve.upastithi.Utilities.Utils;
 
 public class LandingActivity extends AppCompatActivity {
@@ -23,22 +26,25 @@ public class LandingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_landing);
 
         student= (Button) findViewById(R.id.student);
+        teacher= (Button) findViewById(R.id.teacher);
+        admin= (Button) findViewById(R.id.admin);
         student.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent studentLogin = new Intent(LandingActivity.this, StudentLoginActivity.class);
+                startActivity(studentLogin);
             }
         });
-        teacher= (Button) findViewById(R.id.teacher);
+
         teacher.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(LandingActivity.this, TeacherLanding.class);
+                Intent intent = new Intent(LandingActivity.this, TeacherLoginActivity.class);
                 startActivity(intent);
             }
         });
 
-        admin= (Button) findViewById(R.id.admin);
+
         admin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
