@@ -23,6 +23,7 @@ public class LandingActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
         setContentView(R.layout.activity_landing);
 
         student= (Button) findViewById(R.id.student);
@@ -33,6 +34,7 @@ public class LandingActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent studentLogin = new Intent(LandingActivity.this, StudentLoginActivity.class);
                 startActivity(studentLogin);
+                overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
             }
         });
 
@@ -41,6 +43,7 @@ public class LandingActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(LandingActivity.this, TeacherLoginActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
             }
         });
 
@@ -52,5 +55,23 @@ public class LandingActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
     }
 }

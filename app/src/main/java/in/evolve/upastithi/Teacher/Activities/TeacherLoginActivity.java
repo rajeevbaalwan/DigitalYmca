@@ -29,9 +29,22 @@ public class TeacherLoginActivity extends AppCompatActivity {
         teacherLoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent studentLanding = new Intent(TeacherLoginActivity.this,TeacherLanding.class);
-                startActivity(studentLanding);
+                Intent teacherLanding = new Intent(TeacherLoginActivity.this,TeacherLanding.class);
+                startActivity(teacherLanding);
+                overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
             }
         });
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
     }
 }

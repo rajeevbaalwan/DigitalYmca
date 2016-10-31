@@ -4,5 +4,6 @@
     <string name="hint_enter_pass">Enter Your Password</string>
     <string name="btn_student_login">LOGIN</string>
     <string name="hint_enter_id">Enter Your Email Id</string>
+    <string name="student">Student</string>
 
 </resources>

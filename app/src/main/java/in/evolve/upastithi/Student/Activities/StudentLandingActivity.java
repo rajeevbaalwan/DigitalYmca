@@ -40,4 +40,16 @@ public class StudentLandingActivity extends AppCompatActivity {
         viewPager.setAdapter(pagerAdapter);
 
     }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
+    }
 }

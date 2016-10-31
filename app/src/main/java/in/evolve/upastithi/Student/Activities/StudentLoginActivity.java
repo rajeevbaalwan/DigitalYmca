@@ -30,7 +30,20 @@ public class StudentLoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent studentLanding = new Intent(StudentLoginActivity.this,StudentLandingActivity.class);
                 startActivity(studentLanding);
+                overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
             }
         });
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
     }
 }
