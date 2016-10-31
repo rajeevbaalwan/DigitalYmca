@@ -53,7 +53,6 @@
                 android:background="@drawable/circular_button"
                 android:layout_gravity="center_horizontal"/>
 
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
