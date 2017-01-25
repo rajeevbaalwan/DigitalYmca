@@ -84,7 +84,6 @@ public class TeacherLanding extends AppCompatActivity {
 
             }
         });
-
     }
 
     @Override
