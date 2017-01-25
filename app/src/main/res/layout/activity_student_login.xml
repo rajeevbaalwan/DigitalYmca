@@ -31,6 +31,7 @@
             android:layout_marginTop="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="textPassword"
             android:layout_below="@+id/student_roll_input"
             android:id="@+id/student_password_input"/>
 
